@@ -1,5 +1,6 @@
+
 const ManualProcess = () => (
-  <div className="w-[48%] max-md:w-full max-md:mb-10">
+  <div className="w-[48%] max-md:w-full max-md:mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
     <h2 className="text-4xl font-light text-[#202124] mb-10">
       Manual Processes
     </h2>
@@ -61,7 +62,11 @@ const ManualProcess = () => (
         text: "Manually moving document details from runsheets, to flowcharts, to conveyance calculations, to reports",
       },
     ].map((item, index) => (
-      <div key={index} className="flex items-start gap-[25px] mb-[30px]">
+      <div 
+        key={index} 
+        className="flex items-start gap-[25px] mb-[30px] opacity-0 animate-fade-slide-up"
+        style={{ animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: "forwards" }}
+      >
         <div className="w-10 h-10 flex items-center justify-center bg-[rgba(92,46,46,0.10)] rounded-[10px]">
           {item.icon}
         </div>
@@ -74,7 +79,7 @@ const ManualProcess = () => (
 );
 
 const Solution = () => (
-  <div className="w-[48%] max-md:w-full max-md:mb-10">
+  <div className="w-[48%] max-md:w-full max-md:mb-10 animate-fade-in" style={{ animationDelay: "0.4s" }}>
     <h2 className="text-4xl font-light text-[#202124] mb-10">Our Solution</h2>
     {[
       'Smart "file-to-runsheet" links that take you to the information you need – stop digging through folders and files',
@@ -82,7 +87,11 @@ const Solution = () => (
       "Instrument based mineral rights conveyance inputs and automated calculations are accessible from the flowchart shapes",
       "Customizable and autopopulated first draft mineral ownership reports, drilling opinions, and division orders.",
     ].map((text, index) => (
-      <div key={index} className="flex items-start gap-[25px] mb-[30px]">
+      <div 
+        key={index} 
+        className="flex items-start gap-[25px] mb-[30px] opacity-0 animate-fade-slide-up"
+        style={{ animationDelay: `${0.5 + index * 0.1}s`, animationFillMode: "forwards" }}
+      >
         <div className="w-8 h-8 text-xs font-medium text-[#202124] bg-neutral-200 rounded-[10px] border-2 border-solid border-white flex items-center justify-center">
           {String(index + 1).padStart(2, "0")}
         </div>
