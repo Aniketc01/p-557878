@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemStatement } from "@/components/sections/ProblemStatement";
@@ -7,7 +8,7 @@ import { BenefitsGrid } from "@/components/sections/BenefitsGrid";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
         <Hero />

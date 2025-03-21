@@ -1,20 +1,20 @@
 
 export const UploadSection = () => {
   return (
-    <section className="text-center relative bg-[rgba(254,185,185,0.40)] px-[120px] py-10 max-md:p-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-      <h2 className="text-4xl font-light text-[#202124] mb-10">
+    <section className="text-center relative bg-[#FFD7D7] px-8 md:px-12 py-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+      <h2 className="text-2xl font-medium text-[#333] mb-8">
         Drag-and-drop to upload your landman provided files and runsheet
       </h2>
-      <div className="relative h-[500px] max-sm:h-[300px]">
+      <div className="relative h-[300px] md:h-[350px] max-w-[800px] mx-auto">
         {[...Array(6)].map((_, index) => (
           <img
             key={index}
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1350600af41664f1ed017e010e633af37e0e4bc"
+            src="/lovable-uploads/10ecb98b-c4b6-4380-9cea-63df477de05f.png" 
             alt="Upload interface"
-            className={`absolute w-[1015px] h-[448px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-[10px] max-sm:w-full max-sm:h-auto transition-all duration-500 hover:translate-x-1 hover:translate-y-1`}
+            className={`absolute w-full md:w-[80%] shadow-md rounded-md transition-all duration-500 hover:translate-x-1 hover:translate-y-1`}
             style={{
-              left: `${110 - index * 20}px`,
-              top: `${index * 20}px`,
+              left: `${10 + index * 10}px`,
+              top: `${index * 10}px`,
               zIndex: 6 - index,
               transition: "all 0.5s ease",
               animationDelay: `${0.2 + index * 0.1}s`,
@@ -22,8 +22,10 @@ export const UploadSection = () => {
           />
         ))}
       </div>
-      <div className="absolute bottom-[-50px] w-[157px] h-[132px] text-[40px] font-bold text-[rgba(32,33,36,0.80)] bg-[rgba(229,229,229,0.44)] rounded-full border-2 border-solid border-white right-[200px] animate-bounce">
-        →
+      <div className="mt-8">
+        <button className="bg-[#5C2E2E] text-white px-6 py-3 rounded-md font-medium hover:bg-[#4a2525] transform transition-transform duration-300 hover:scale-105">
+          Join the Early Access Program
+        </button>
       </div>
     </section>
   );

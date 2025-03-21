@@ -1,47 +1,48 @@
+
 import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between relative z-10 px-[120px] py-[72px] max-md:p-10 max-sm:flex-col max-sm:gap-5 max-sm:p-5">
+    <header className="flex items-center justify-between py-6 px-8 md:px-12 border-b border-[#eee]">
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/16c7e68255b2d7aec7bb07d2d0fb6bb7c7fbdb5d"
         alt="TitleMine"
-        className="w-[102px] h-11"
+        className="h-8"
       />
-      <nav className="flex items-center gap-10 max-sm:flex-col max-sm:w-full">
+      <nav className="hidden md:flex items-center gap-8">
         <Link
           to="/"
-          className="text-base text-[#202124] cursor-pointer px-0 py-2.5"
+          className="text-sm text-[#333] hover:text-[#5C2E2E] transition-colors"
         >
           Home
         </Link>
         <Link
           to="/what-we-do"
-          className="text-base text-[#202124] cursor-pointer px-0 py-2.5"
+          className="text-sm text-[#333] hover:text-[#5C2E2E] transition-colors"
         >
           What We Do
         </Link>
         <Link
           to="/early-access"
-          className="text-base text-[#202124] cursor-pointer px-0 py-2.5"
+          className="text-sm text-[#333] hover:text-[#5C2E2E] transition-colors"
         >
           Early Access Program
         </Link>
         <Link
           to="/contact"
-          className="text-base text-[#202124] cursor-pointer px-0 py-2.5"
+          className="text-sm text-[#333] hover:text-[#5C2E2E] transition-colors"
         >
           Contact Us
         </Link>
-        <div className="flex max-sm:w-full max-sm:justify-center">
-          <button className="w-[84px] h-10 text-sm font-medium text-[#202124] shadow-[0_4px_14px_rgba(92,46,46,0.25)] bg-[rgba(229,229,229,0.81)] rounded-[10px_0_0_10px]">
-            Log in
-          </button>
-          <button className="w-[84px] h-10 text-sm font-medium text-white shadow-[0_4px_14px_rgba(92,46,46,0.25)] bg-[#5C2E2E] rounded-[0_10px_10px_0]">
-            Sign Up
-          </button>
-        </div>
       </nav>
+      <div className="flex">
+        <button className="text-sm font-medium bg-white text-[#333] border border-[#ddd] px-4 py-2 rounded-l-md hover:bg-[#f9f9f9]">
+          Log in
+        </button>
+        <button className="text-sm font-medium bg-[#5C2E2E] text-white px-4 py-2 rounded-r-md hover:bg-[#4a2525]">
+          Sign Up
+        </button>
+      </div>
     </header>
   );
 };
